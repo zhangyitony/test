@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<table tableName = "finacialPlan"  chTableName= "投资计划" identifier = "table1">
+		<params name = "customFileds"  >
+			<param name = "proj_name" value ="项目名称" type = "string"></param>
+			<param name = "build_unit" value ="代建单位"  type = "string"></param>
+			<param name = "cell_name" value ="小区名称"  type = "string"></param>
+			<param name = "build_add" value ="建设地址"  type = "string"></param>
+			<param name = "file_id" value = "审批文件号"   type = "integer"></param>
+			<param name = "file_plan" value = "计划总投资" >
+				<param name = "summoney" value = "合计"  type = "big_decimal"></param>
+				<param name = "finacial" value = "财政投资"  >
+					<param name = "center" value = "中央"  type = "big_decimal"></param>
+					<param name = "province" value = "省"  type = "big_decimal"></param>
+					<param name = "city" value = "市"  type = "big_decimal"></param>
+					<param name = "town" value = "区县"  type = "big_decimal"></param>
+				</param>
+			</param>
+		</params>
+	 	<operate result = "sum">
+	 		<operator name="-">
+	 			<num name="investgatePlan"></num>
+	 			<num name="loan"></num>
+			</operator>
+	 	</operate>
+	</table>
+	
+	
